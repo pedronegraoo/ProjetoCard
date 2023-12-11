@@ -24,12 +24,12 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-// VALIDANDO NO MÍNIMO 16 DIGITOS NO INPUT NUMBER
+// VALIDANDO NO MÍNIMO 19 DIGITOS (contando os espaços) NO INPUT NUMBER
 function verificacaoNumberCard() {
   let tamanho = inputCardNumber.value;
   let message = document.querySelector(".erro-numberCard");
 
-  if (tamanho.length < 16) {
+  if (tamanho.length < 19) {
     inputCardNumber.classList.add("erro");
     message.style.visibility = "visible";
 
@@ -118,6 +118,19 @@ inputCardName.addEventListener("keypress", (event) => {
   }
 });
 
+// VALIDANDO SOMENTE NÚMEROS NO INPUT NUMBER
+inputCardNumber.addEventListener("keypress", (event) => {
+  const keyCode = event.keyCode ? event.keyCode : event.wich;
+
+  if (keyCode >= 32 && keyCode < 48) {
+    event.preventDefault();
+  }
+
+  if (keyCode > 58 && keyCode <= 180) {
+    event.preventDefault();
+  }
+});
+
 btnResponse.addEventListener("click", () => {
   form.style.display = "flex";
   response.style.display = "none";
@@ -150,14 +163,17 @@ inputCardName.addEventListener("keyup", () => {
 });
 
 inputCardNumber.addEventListener("keyup", () => {
-  let store = inputCardNumber.value;
+  let posicao = inputCardNumber.value.length;
 
-  let str1 = store.substr(0, 4) + " ";
-  let str2 = store.substr(4, 4) + " ";
-  let str3 = store.substr(8, 4) + " ";
-  let str4 = store.substr(12, 4);
+  if (posicao === 4) {
+    inputCardNumber.value += " ";
+  } else if (posicao === 9) {
+    inputCardNumber.value += " ";
+  } else if (posicao === 14) {
+    inputCardNumber.value += " ";
+  }
 
-  numberCard.textContent = str1 + str2 + str3 + str4;
+  numberCard.textContent = inputCardNumber.value;
 });
 
 inputMonth.addEventListener("keyup", () => {
