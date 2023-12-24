@@ -135,11 +135,7 @@ btnResponse.addEventListener("click", () => {
   form.style.display = "flex";
   response.style.display = "none";
 
-  inputCardName.value = "";
-  inputCardNumber.value = "";
-  inputMonth.value = "";
-  inputYear.value = "";
-  inputCode.value = "";
+  form.reset(); /*RESET metodo para limpar o formulario */
 
   nameCard.textContent = "Jane Appleseed";
   numberCard.textContent = "0000 0000 0000 0000";
