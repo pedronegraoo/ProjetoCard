@@ -7,8 +7,6 @@ const inputMonth = document.querySelector(".input-month");
 const inputYear = document.querySelector(".input-year");
 const inputCode = document.querySelector(".input-code");
 
-// oninput="this.value = this.value.replace(/[0-9]/g, '');"
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
