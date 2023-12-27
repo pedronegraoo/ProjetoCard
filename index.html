@@ -99,7 +99,7 @@
                   placeholder="MM"
                   maxlength="2"
                   required
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                  oninput="this.value = this.value.replace(/(\D)/g, '')"
                 />
 
                 <input
@@ -131,13 +131,6 @@
 
           <button class="btn-confirm">Confirm</button>
         </div>
-
-        <!-- <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
-        </div> -->
       </form>
 
       <div class="response">
