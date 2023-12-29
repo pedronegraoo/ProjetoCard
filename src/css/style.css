@@ -1,0 +1,494 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Bodoni+Moda:opsz@6..96&family=Caprasimo&family=Cormorant:wght@300&family=Inclusive+Sans&family=Lobster&family=Lobster+Two&family=Open+Sans:wght@300;500;700&family=Outfit:wght@300;400;600&family=Poppins:wght@100;400&family=Roboto+Slab:wght@100&family=Roboto:wght@100;400&family=Space+Grotesk:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Space Grotesk";
+}
+
+main {
+  display: flex;
+  /* CONTEUDO LEFT */
+  /* CONTEÚDO RIGHT */
+  /* RESPOSTA */
+}
+main .background-left {
+  width: 35%;
+  height: 99vh;
+  position: relative;
+  /* CARTÃO - FRONT */
+  /* CARTÃO - BACK */
+}
+main .background-left img {
+  width: 100%;
+  height: 100%;
+}
+main .background-left .card-front img,
+main .background-left .card-back img {
+  width: 100%;
+}
+main .background-left .card-front {
+  width: 400px;
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  z-index: 10;
+}
+main .background-left .card-front img {
+  position: relative;
+}
+main .background-left .card-front .content-card-front {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-inline: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .background-left .card-front .content-card-front .content-circles {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .background-left .card-front .content-card-front .content-circles .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+main .background-left .card-front .content-card-front .content-circles .circleSmall {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+main .background-left .card-front .content-card-front .number-card {
+  width: 100%;
+  height: 5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Space Grotesk";
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: end;
+}
+main .background-left .card-front .content-card-front .name-valid-card {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Space Grotesk";
+  text-transform: uppercase;
+}
+main .background-left .card-back {
+  width: 400px;
+  position: absolute;
+  top: 52%;
+  right: -30%;
+  z-index: 9;
+}
+main .background-left .card-back img {
+  position: relative;
+}
+main .background-left .card-back .content-card-back {
+  position: absolute;
+  bottom: 47%;
+  right: 14%;
+}
+main .background-left .card-back .content-card-back .code-card-back {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Space Grotesk";
+  letter-spacing: 2px;
+}
+main .form {
+  width: 65%;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .form .form-global {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+  margin-left: 5rem;
+}
+main .form .form-global .form-global ::placeholder {
+  color: #dedddf;
+}
+main .form .form-global .content-name,
+main .form .form-global .content-card {
+  display: flex;
+  flex-direction: column;
+}
+main .form .form-global .content-name label,
+main .form .form-global .content-card label,
+main .form .form-global .date-exp-card label,
+main .form .form-global .cod-card label {
+  color: #000;
+  font-size: 0.9rem;
+  font-family: "Space Grotesk";
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+main .form .form-global .content-name input,
+main .form .form-global .content-card input {
+  width: 22.5rem;
+  height: 2.2rem;
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 0.8rem;
+  font-family: "Space Grotesk";
+  border: 1px solid #dedddf;
+  padding: 10px;
+  text-transform: uppercase;
+}
+main .form .form-global .content-name input:focus,
+main .form .form-global .content-card input:focus,
+main .form .form-global .date-exp-card input:focus,
+main .form .form-global .cod-card input:focus {
+  border: 1px solid #600594;
+  /* background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)); */
+}
+main .form .form-global .info-card {
+  width: 22.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+main .form .form-global .date-exp-card {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+}
+main .form .form-global .date-exp-card .date-exp-card-inputs {
+  display: flex;
+  gap: 0.6rem;
+}
+main .form .form-global .date-exp-card .date-exp-card-inputs input {
+  width: 4.5rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 0.8rem;
+  font-family: "Space Grotesk";
+  border: 1px solid #dedddf;
+  padding: 10px;
+}
+main .form .form-global .cod-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .form .form-global .cod-card input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 0.8rem;
+  font-family: "Space Grotesk";
+  border: 1px solid #dedddf;
+  padding: 10px;
+}
+main .form .form-global .btn-confirm {
+  width: 22.5rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #21092f;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+main .form .form-global .btn-confirm:hover {
+  background-color: #ffffff;
+  color: #21092f;
+  border: 2px solid #21092f;
+}
+main .form .form-global .input-number-card.erro,
+main .form .form-global .input-month.erro,
+main .form .form-global .input-year.erro,
+main .form .form-global .input-code.erro {
+  border: 1px solid rgba(255, 0, 0, 0.7607843137);
+}
+main .form .form-global .erro-numberCard,
+main .form .form-global .erro-monthCard-yearCard,
+main .form .form-global .erro-codeCard {
+  visibility: hidden;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  color: rgba(255, 0, 0, 0.7607843137);
+}
+main .response {
+  width: 65%;
+  padding: 4%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .response .response-content {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main .response .response-content .check {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#6448fe, #600594);
+}
+main .response .response-content .check i {
+  color: #ffffff;
+  font-size: 1.9rem;
+}
+main .response .response-content .response-content div + p {
+  color: #21092f;
+  font-size: 1.5rem;
+  font-family: "Space Grotesk";
+  text-transform: uppercase;
+  margin-top: 1rem;
+  letter-spacing: 4px;
+}
+main .response .response-content .response-content p ~ p {
+  color: #8e8593;
+}
+main .response .response-content .btn-response {
+  width: 23rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Space Grotesk";
+  background-color: #21092f;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+main .response .response-content .btn-response:hover {
+  background-color: #ffffff;
+  color: #21092f;
+  border: 2px solid #21092f;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    /* RESPONSE */
+  }
+  main .background-left {
+    /* IMAGEM CARTÃO */
+  }
+  main .background-left .card-front,
+  main .background-left .card-back {
+    width: 300px;
+  }
+  main .background-left .card-front {
+    top: 18%;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circle {
+    width: 35px;
+    height: 35px;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circleSmall {
+    width: 15px;
+    height: 15px;
+  }
+  main .background-left .card-front .content-card-front .number-card {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    height: 4rem;
+    text-decoration: none;
+  }
+  main .background-left .card-front .content-card-front .name-valid-card {
+    font-size: 0.8rem;
+    height: 2.2rem;
+  }
+  main .background-left .card-back .content-card-back .code-card-back {
+    font-size: 0.8rem;
+  }
+  main .form {
+    padding: 2%;
+    align-items: flex-end;
+  }
+  main .form .form-global {
+    width: 380px;
+    margin-left: 0;
+  }
+  main .response {
+    padding: 2%;
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 2rem;
+    /* CONTEUDO LEFT */
+    /* RESPONSE */
+  }
+  main .background-left {
+    width: 100%;
+    height: 300px;
+    /* IMAGEM CARTÃO */
+  }
+  main .background-left .card-front {
+    top: 60%;
+    left: 50%;
+    transform: translateX(-65%);
+  }
+  main .background-left .card-back {
+    top: 29%;
+    left: 50%;
+    transform: translateX(-40%);
+  }
+  main .form {
+    width: 100%;
+  }
+  main .form .form-global {
+    width: 100%;
+  }
+  main .response {
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  main .response .response-content .check {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .response .response-content .check i {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    /* CONTEUDO LEFT */
+  }
+  main .background-left {
+    height: 250px;
+    /* IMAGEM CARTÃO */
+  }
+  main .background-left .card-front {
+    width: 280px;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circle {
+    width: 30px;
+    height: 30px;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circleSmall {
+    width: 10px;
+    height: 10px;
+  }
+  main .background-left .card-front .content-card-front .number-card {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    height: 3.5rem;
+    text-decoration: none;
+  }
+  main .background-left .card-front .content-card-front .name-valid-card {
+    font-size: 0.7rem;
+    height: 2.2rem;
+  }
+  main .background-left .card-back {
+    width: 280px;
+    top: 25%;
+  }
+  main .background-left .card-back .content-card-back .code-card-back {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  main {
+    /* IMAGEM CARTÃO */
+    /* response */
+  }
+  main .background-left .card-front {
+    width: 250px;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circle {
+    width: 25px;
+    height: 25px;
+  }
+  main .background-left .card-front .content-card-front .content-circles .circleSmall {
+    width: 8px;
+    height: 8px;
+  }
+  main .background-left .card-front .content-card-front .number-card {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    height: 3rem;
+    text-decoration: none;
+  }
+  main .background-left .card-front .content-card-front .name-valid-card {
+    font-size: 0.6rem;
+    height: 2.2rem;
+  }
+  main .background-left .card-back {
+    width: 250px;
+    top: 29%;
+  }
+  main .background-left .card-back .content-card-back .code-card-back {
+    font-size: 0.6rem;
+  }
+  main .form {
+    padding: 4%;
+  }
+  main .form .form-global {
+    width: 100%;
+    /* margin-left: 0;
+      padding: 0; */
+  }
+  main .form .form-global .content-name,
+  main .form .form-global .content-card {
+    width: 100%;
+  }
+  main .form .form-global .content-name input,
+  main .form .form-global .content-card input {
+    width: 100%;
+  }
+  main .form .form-global .info-card,
+  main .form .form-global .btn-confirm {
+    width: 100%;
+  }
+  main .response {
+    padding: 4%;
+  }
+  main .response .response-content {
+    width: 100%;
+  }
+  main .response .response-content .check {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .response .response-content .check i {
+    font-size: 2.2rem;
+  }
+  main .response .response-content .btn-response {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
