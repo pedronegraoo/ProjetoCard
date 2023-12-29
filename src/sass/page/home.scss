@@ -1,0 +1,330 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $font-spaceGrotesk;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin color-size-family($color, $size, $family) {
+  color: $color;
+  font-size: $size;
+  font-family: $family;
+}
+
+@mixin display-justify-align($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin width-height-borderRadius($width, $height, $borderRadius) {
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
+}
+
+main {
+  display: flex;
+
+  /* CONTEUDO LEFT */
+
+  .background-left {
+    @include width-height(35%, 99vh);
+    position: relative;
+
+    img {
+      @include width-height(100%, 100%);
+    }
+
+    /* CARTÃO - FRONT */
+
+    .card-front img,
+    .card-back img {
+      width: 100%;
+    }
+
+    .card-front {
+      width: 400px;
+
+      position: absolute;
+      top: 10%;
+      right: -15%;
+      z-index: 10;
+
+      img {
+        position: relative;
+      }
+
+      .content-card-front {
+        @include width-height(100%, 100%);
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-inline: 20px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .content-circles {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .circle {
+            @include width-height-borderRadius(40px, 40px, 50%);
+            background-color: $color-white;
+          }
+
+          .circleSmall {
+            @include width-height-borderRadius(20px, 20px, 50%);
+            border: 1px solid $color-white;
+          }
+        }
+
+        .number-card {
+          @include width-height(100%, 5rem);
+          @include color-size-family($color-white, 1.5rem, $font-spaceGrotesk);
+          letter-spacing: 4px;
+          text-decoration: none;
+
+          display: flex;
+          align-items: end;
+        }
+
+        .name-valid-card {
+          @include width-height(100%, 3.5rem);
+          @include display-justify-align(flex, space-between, flex-end);
+          @include color-size-family($color-white, 1rem, $font-spaceGrotesk);
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    /* CARTÃO - BACK */
+
+    .card-back {
+      width: 400px;
+
+      position: absolute;
+      top: 52%;
+      right: -30%;
+      z-index: 9;
+
+      img {
+        position: relative;
+      }
+
+      .content-card-back {
+        position: absolute;
+        bottom: 47%;
+        right: 14%;
+
+        .code-card-back {
+          @include color-size-family($color-white, 1rem, $font-spaceGrotesk);
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  /* CONTEÚDO RIGHT */
+
+  .form {
+    width: 65%;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-global {
+      @include width-height(400px, 400px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 20px;
+      margin-left: 5rem;
+
+      .form-global ::placeholder {
+        color: $color-purple-light;
+      }
+
+      .content-name,
+      .content-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-name label,
+      .content-card label,
+      .date-exp-card label,
+      .cod-card label {
+        @include color-size-family($color-black, 0.9rem, $font-spaceGrotesk);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .content-name input,
+      .content-card input {
+        @include width-height-borderRadius(22.5rem, 2.2rem, 0.3rem);
+        @include color-size-family($color-black, 0.8rem, $font-spaceGrotesk);
+        border: 1px solid $color-purple-light;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+
+      .content-name input:focus,
+      .content-card input:focus,
+      .date-exp-card input:focus,
+      .cod-card input:focus {
+        border: 1px solid $border-input-active;
+        /* background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)); */
+      }
+
+      .info-card {
+        width: 22.5rem;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .date-exp-card {
+        width: 12rem;
+        display: flex;
+        flex-direction: column;
+
+        .date-exp-card-inputs {
+          display: flex;
+          gap: 0.6rem;
+
+          input {
+            @include width-height-borderRadius(4.5rem, 2.5rem, 0.3rem);
+            @include color-size-family(
+              $color-black,
+              0.8rem,
+              $font-spaceGrotesk
+            );
+            border: 1px solid $color-purple-light;
+            padding: 10px;
+          }
+        }
+      }
+
+      .cod-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          @include width-height-borderRadius(100%, 2.5rem, 0.3rem);
+          @include color-size-family($color-black, 0.8rem, $font-spaceGrotesk);
+          border: 1px solid $color-purple-light;
+          padding: 10px;
+        }
+      }
+
+      .btn-confirm {
+        @include width-height-borderRadius(22.5rem, 3rem, 0.3rem);
+        background-color: $color-purple-very-dark;
+        color: $color-white;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-purple-very-dark;
+          border: 2px solid $color-purple-very-dark;
+        }
+      }
+
+      .input-number-card.erro,
+      .input-month.erro,
+      .input-year.erro,
+      .input-code.erro {
+        border: 1px solid $border-erro-red;
+      }
+
+      .erro-numberCard,
+      .erro-monthCard-yearCard,
+      .erro-codeCard {
+        visibility: hidden;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+        color: $border-erro-red;
+      }
+    }
+  }
+
+  /* RESPOSTA */
+
+  .response {
+    width: 65%;
+    padding: 4%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .response-content {
+      @include width-height(400px, 300px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .check {
+        @include width-height-borderRadius(4rem, 4rem, 50%);
+        @include display-justify-align(flex, center, center);
+        background: linear-gradient(#6448fe, #600594);
+
+        i {
+          color: $color-white;
+          font-size: 1.9rem;
+        }
+      }
+
+      .response-content div + p {
+        @include color-size-family(
+          $color-purple-very-dark,
+          1.5rem,
+          $font-spaceGrotesk
+        );
+        text-transform: uppercase;
+        margin-top: 1rem;
+        letter-spacing: 4px;
+      }
+
+      .response-content p ~ p {
+        color: $color-purple-dark;
+      }
+
+      .btn-response {
+        @include width-height-borderRadius(23rem, 3rem, 0.3rem);
+        @include color-size-family($color-white, 1rem, $font-spaceGrotesk);
+        background-color: $color-purple-very-dark;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-purple-very-dark;
+          border: 2px solid $color-purple-very-dark;
+        }
+      }
+    }
+  }
+}

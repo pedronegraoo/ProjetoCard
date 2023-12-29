@@ -1,0 +1,277 @@
+@media screen and (max-width: 1024px) {
+  main {
+    .background-left {
+      /* IMAGEM CARTÃO */
+
+      .card-front,
+      .card-back {
+        width: 300px;
+      }
+
+      .card-front {
+        top: 18%;
+
+        .content-card-front {
+          .content-circles {
+            .circle {
+              width: 35px;
+              height: 35px;
+            }
+
+            .circleSmall {
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          .number-card {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            height: 4rem;
+            text-decoration: none;
+          }
+
+          .name-valid-card {
+            font-size: 0.8rem;
+            height: 2.2rem;
+          }
+        }
+      }
+
+      .card-back {
+        .content-card-back {
+          .code-card-back {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    // FORM
+
+    .form {
+      padding: 2%;
+      align-items: flex-end;
+
+      .form-global {
+        width: 380px;
+        margin-left: 0;
+      }
+    }
+
+    /* RESPONSE */
+
+    .response {
+      padding: 2%;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 2rem;
+
+    /* CONTEUDO LEFT */
+
+    .background-left {
+      width: 100%;
+      height: 300px;
+
+      /* IMAGEM CARTÃO */
+
+      .card-front {
+        top: 60%;
+        left: 50%;
+        transform: translateX(-65%);
+      }
+
+      .card-back {
+        top: 29%;
+        left: 50%;
+        transform: translateX(-40%);
+      }
+    }
+
+    // FORM
+
+    .form {
+      width: 100%;
+
+      .form-global {
+        width: 100%;
+      }
+    }
+
+    /* RESPONSE */
+
+    .response {
+      width: 100%;
+      align-items: center;
+      margin-top: 2rem;
+
+      .response-content {
+        .check {
+          width: 5rem;
+          height: 5rem;
+
+          i {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    /* CONTEUDO LEFT */
+
+    .background-left {
+      height: 250px;
+
+      /* IMAGEM CARTÃO */
+
+      .card-front {
+        width: 280px;
+
+        .content-card-front {
+          .content-circles {
+            .circle {
+              width: 30px;
+              height: 30px;
+            }
+
+            .circleSmall {
+              width: 10px;
+              height: 10px;
+            }
+          }
+
+          .number-card {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            height: 3.5rem;
+            text-decoration: none;
+          }
+
+          .name-valid-card {
+            font-size: 0.7rem;
+            height: 2.2rem;
+          }
+        }
+      }
+
+      .card-back {
+        width: 280px;
+        top: 25%;
+
+        .content-card-back {
+          .code-card-back {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    /* IMAGEM CARTÃO */
+    .background-left {
+      .card-front {
+        width: 250px;
+
+        .content-card-front {
+          .content-circles {
+            .circle {
+              width: 25px;
+              height: 25px;
+            }
+
+            .circleSmall {
+              width: 8px;
+              height: 8px;
+            }
+          }
+
+          .number-card {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            height: 3rem;
+            text-decoration: none;
+          }
+
+          .name-valid-card {
+            font-size: 0.6rem;
+            height: 2.2rem;
+          }
+        }
+      }
+
+      .card-back {
+        width: 250px;
+        top: 29%;
+
+        .content-card-back {
+          .code-card-back {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+
+    // FORM
+
+    .form {
+      padding: 4%;
+
+      .form-global {
+        width: 100%;
+        /* margin-left: 0;
+          padding: 0; */
+
+        .content-name,
+        .content-card {
+          width: 100%;
+        }
+
+        .content-name input,
+        .content-card input {
+          width: 100%;
+        }
+
+        .info-card,
+        .btn-confirm {
+          width: 100%;
+        }
+      }
+    }
+
+    /* response */
+
+    .response {
+      padding: 4%;
+
+      .response-content {
+        width: 100%;
+
+        .check {
+          width: 5rem;
+          height: 5rem;
+
+          i {
+            font-size: 2.2rem;
+          }
+        }
+
+        .btn-response {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
